@@ -22,15 +22,15 @@ export class UserService {
   	return this.http.get(this.url + "Get/" + Id) as Observable<JsonResponse>;
   }
 
-  Create(user: User): Observable<JsonResponse> {
+  create(user: User): Observable<JsonResponse> {
   	return this.http.post(this.url + "Create", user)  as Observable<JsonResponse>;
   }
 
-  Change(user: User): Observable<JsonResponse> {
+  change(user: User): Observable<JsonResponse> {
   	return this.http.post(this.url + "Change", user)  as Observable<JsonResponse>;
   }
 
-  Remove(user: User): Observable<JsonResponse> {
+  remove(user: User): Observable<JsonResponse> {
   	return this.http.post(this.url + "Remove", user)  as Observable<JsonResponse>;
   }
 

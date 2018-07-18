@@ -11,5 +11,10 @@ export class User {
 	IsAdmin: boolean;
 	Active: boolean;
 
-	constructor() {}
+	constructor() {
+		this.Id= 0;
+		this.IsReviewer = false;
+		this.IsAdmin = false;
+		this.Active = true;
+	}
 }

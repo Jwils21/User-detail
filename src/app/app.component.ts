@@ -17,13 +17,13 @@ export class AppComponent implements OnInit {
   constructor(private usersvc: UserService) {};
 
   ngOnInit() {
-  	//list users
-  	this.usersvc.list()
-  		.subscribe(resp => {
-  			this.users = []
-  			this.users = resp.Data;
-  			console.log(resp);
-  		});
+  	// //list users
+  	// this.usersvc.list()
+  	// 	.subscribe(resp => {
+  	// 		this.users = []
+  	// 		this.users = resp.Data;
+  	// 		console.log(resp);
+  	// 	});
 
   	// let user1 = new User() {
   	// 	this.Username = "Jim",

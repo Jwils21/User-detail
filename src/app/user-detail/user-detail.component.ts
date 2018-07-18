@@ -3,7 +3,6 @@ import { UserService } from '../user.service'
 import { User } from '../user'
 import { JsonResponse } from '../JsonResponse'
 
-
 @Component({
   selector: 'user-detail',
   templateUrl: './user-detail.component.html',
@@ -11,17 +10,15 @@ import { JsonResponse } from '../JsonResponse'
 })
 export class UserDetailComponent implements OnInit {
 
-  user: User;
-
-
+  user: User = new User();
 
   constructor(private usersvc: UserService) {
   	  	//Get user
-  	this.usersvc.get(2)
-  		.subscribe(resp => {
-  			this.user = resp.Data;
-  			console.log(resp);
-  		});
+    this.usersvc.get(2)
+      .subscribe(resp => {
+        this.user = resp.Data;
+        console.log(resp);
+      });
   }
 
   ngOnInit() {
