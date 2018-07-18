@@ -1,0 +1,10 @@
+input[type=checkbox] {
+  transform: scale(1.5);
+}
+input[type=checkbox]:hover {
+  transform: scale(2.0);
+}
+.form-control:hover {
+  transform: scale(1.01);
+  border-color: #4CAF50;
+}

@@ -12,6 +12,14 @@ export class UserDetailComponent implements OnInit {
 
   user: User = new User();
 
+  remove(): void {
+    this.usersvc.remove(this.user)
+      .subscribe(resp => {
+         console.log("remove:", resp)
+         // 
+      });
+  }
+
   constructor(private usersvc: UserService) {
   	  	//Get user
     this.usersvc.get(2)
